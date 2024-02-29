@@ -1,0 +1,243 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    min-height: 100vh;
+    background: linear-gradient(#39113a,#e6ceec);
+
+}
+
+header{
+  
+    display: flex;
+    position:relative;
+    top: 0;
+    left: 0;
+   padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+header .logo{
+    font-family: "Press Start 2P",sans-serif;
+    color: rgb(255, 40, 148);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+header ul li{
+    list-style:none;
+    margin-left:30px
+
+}
+header ul li a{
+    font-family: "Source Code Pro";
+    text-decoration:none;
+    padding:6px 15px;
+    color:#fff;
+    border-radius:20px
+
+}
+header .logo:hover
+{
+    color: rgb(103, 235, 224);
+
+}
+header ul li a:hover,
+header ul li a.active{
+    background: #ff31ba;
+    color: #2b1055;
+}
+/*start home*/
+.home {
+    background-image: url(../img/-background-for-a-portfolio-website-for-a-web-developper.jpg);
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+   position: relative;
+    width: 100%;
+    height: 100vh; 
+    
+}
+.text{
+    font-family: "Source Code Pro";
+    text-align: center;
+    margin:160px  30%;
+   
+
+}
+.text h1{
+    
+    font-size: 30px;
+    color: rgb(165, 245, 245);
+}
+.text h2{
+    overflow: hidden;
+    border-right: .07em solid rgb(103, 235, 224);
+    white-space: nowrap;
+    animation: typing 3s steps(30) infinite;
+    letter-spacing: 10px;
+    font-size: 30px;
+    color: #fff;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+/*start home*/
+.about{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffdff4;
+    flex-direction: row;
+    font-family:"Source Code Pro" ; 
+    
+   
+}
+.about h1{
+   text-align: center;
+font-size:40px;
+    color: #2b1055;
+    overflow: hidden;
+    border-right: .07em solid rgb(103, 235, 224);
+    white-space: nowrap;
+    animation: typingA 1.5s steps(120) infinite;
+    letter-spacing: 10px;
+
+
+}
+@keyframes typingA {
+    from { width: 0 }
+    to { width:20% }
+}
+.about .texte-container{  
+letter-spacing: 1px;
+margin-left: 55%;
+margin-right: 10%;
+text-align: center;
+
+}
+.texte-container h3{
+    font-size: 23px;
+}
+.texte-container p{
+    font-size:20px;
+ 
+}
+.texte-container h4{
+    font-family: "Press Start 2P",sans-serif;
+    color: rgb(255, 40, 148);
+    font-size:20px ;
+    letter-spacing: 1px;
+    
+}
+.about img{
+    width: 400px;
+    height: 400px;
+    margin-left: 50px;
+
+
+}
+
+/*end about*/
+/*start contact*/
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Source Code Pro";
+    background-color: #e69aff;
+    background: url(../img/contact.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.contact .box{
+    background: transparent;
+border: 2px solid rgba(255,255,255,.2);
+backdrop-filter: blur(10px);
+box-shadow: 0 0 10px rgba(0,0,0,.2);
+    border-radius: 10px;
+    color: #fff;
+    padding: 30px 40px;
+
+
+}
+.box h1{
+    font-size: 40px;
+    color: #3a013a;
+    text-align: center;
+    animation: typingC 2s steps(20) infinite ;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .07em solid rgb(103, 235, 224);
+    
+    
+}
+@keyframes typingC{
+    from{width: 0;}
+    to{width: 100%;}
+}
+.box .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline:none;
+    border:2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+    color: #fff;
+}
+.input-box  i {
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+   
+}
+.box .btn{
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+     border-radius: 40px;
+     box-shadow:0 0 10px rgba(0,0,0,.1);
+cursor: pointer;
+font-size: 16px;
+color: #333;
+font-weight: 600;
+}
+.input-box:hover {
+    border:2px solid rgb(255, 255, 255);
+    border-radius: 40px;
+}
+.box .btn:hover{
+    opacity: 50% ;
+}
