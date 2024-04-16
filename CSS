@@ -1,28 +1,27 @@
-*{
-    padding:0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
-    
-    min-height: 100vh;
-    background: linear-gradient(#39113a,#e6ceec);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
 }
 
-header{
+body {
+    font-family: "Source Code Pro";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* DESKTOP NAV */
+nav{
+    justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  background:linear-gradient( #2f0149da, #42175a);
+  display: flex;
   
-    display: flex;
-    position:relative;
-    top: 0;
-    left: 0;
-   padding: 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
 }
-header .logo{
+nav .logo{
     font-family: "Press Start 2P",sans-serif;
     color: rgb(255, 40, 148);
     font-weight: 700;
@@ -31,44 +30,50 @@ header .logo{
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-header ul{
+nav ul{
+    gap: 2rem;
     display:flex;
     justify-content:center;
     align-items: center;
 }
-header ul li{
+nav ul li{
     list-style:none;
     margin-left:30px
-
 }
-header ul li a{
+nav ul li a{
     font-family: "Source Code Pro";
     text-decoration:none;
     padding:6px 15px;
-    color:#fff;
-    border-radius:20px
-
+    border-radius:20px;
+    color: #ffffff;
+    font-size:18px ;
 }
-header .logo:hover
+nav .logo:hover
 {
     color: rgb(103, 235, 224);
-
 }
-header ul li a:hover,
-header ul li a.active{
+nav ul li a:hover,
+nav ul li a.active{
     background: #ff31ba;
     color: #2b1055;
 }
 /*start home*/
+section {
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+  .section-container {
+    display: flex;
+  }
 .home {
     background-image: url(../img/-background-for-a-portfolio-website-for-a-web-developper.jpg);
     background-size: cover;
     justify-content: center;
     display: flex;
    position: relative;
-    width: 100%;
-    height: 100vh; 
-    
+   height: 100vh;
+     
+   
 }
 .text{
     font-family: "Source Code Pro";
@@ -95,65 +100,175 @@ header ul li a.active{
     from { width: 0 }
     to { width: 100% }
 }
-/*start home*/
-.about{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: #ffdff4;
-    flex-direction: row;
-    font-family:"Source Code Pro" ; 
+/*start about*/
+
+#about {
+    display: flex;
+    background-color: #ffdef3;
+    gap: 5rem;
+    align-items: center;
     
-   
 }
-.about h1{
-   text-align: center;
-font-size:40px;
+#about h1 {
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size:50px;
     color: #2b1055;
-    overflow: hidden;
-    border-right: .07em solid rgb(103, 235, 224);
     white-space: nowrap;
-    animation: typingA 1.5s steps(120) infinite;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
+    padding-left: 10px;
+}
 
+.section__pic-container{
+    height: 350px;
+    width: 350px;
+    margin: auto 0;
+    display: flex;
+}
+.section_text {
+    padding-top: 20px;
+    padding-right: 50px;
+    text-align: center;
+    align-self: center; 
 
 }
-@keyframes typingA {
-    from { width: 0 }
-    to { width:20% }
+.section_text h3 {
+    font-weight: bold;
+    font-size: 30px;
 }
-.about .texte-container{  
-letter-spacing: 1px;
-margin-left: 55%;
-margin-right: 10%;
-text-align: center;
+
+.section_text h4 {
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.section_text p { 
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+#social-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
 
 }
-.texte-container h3{
-    font-size: 23px;
+/*icons*/
+.icon{
+    cursor: pointer;
+    height: 2rem;
 }
-.texte-container p{
-    font-size:20px;
- 
+/*button*/
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
-.texte-container h4{
-    font-family: "Press Start 2P",sans-serif;
-    color: rgb(255, 40, 148);
-    font-size:20px ;
-    letter-spacing: 1px;
+.btn{
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 10rem;
+    border-radius: 2rem;
+}
+.btn-color-1, .btn-color-2{
+border: rgb(59, 49, 49) 0.1rem ;
+}
+.btn-color-2{
+    background-color: #2b1055;
+    color: #fff;
+
+}
+.btn-color-1:hover,
+.btn-color-2:hover{
+    cursor: pointer;
+    border: 0.1rem solid ;
+}
+.btn-color-1{
+    color: white;
+   background: rgb(178, 110, 209)
+}
+.btn-color-2:hover{
+    color: rgb(40, 2, 58);
+   background: rgb(178, 110, 209)
+    
     
 }
-.about img{
-    width: 400px;
-    height: 400px;
-    margin-left: 50px;
-
-
+.btn-color-1:hover
+{
+    color: rgb(45, 3, 73);
 }
 
+.btn-color-2:hover{
+    border: rgb(32, 0, 44) 0.1rem solid;
+}
 /*end about*/
+/*start skills*/
+#Skills {
+    display: flex;
+    background-color: #f3d8ff;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+  }
+  .section__text_skills{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size:50px;
+    color: #2b1055;
+    white-space: nowrap;   
+  }
+  .skills-sub-title {
+    color: rgb(95, 17, 126);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  .details-container{
+   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 250px;
+    font-size: 20px;
+  }
+  .skills-details-container {
+    display: flex;
+    
+    align-items: center;
+    padding-left: 20px;
+   
+  }
+  .article-container {
+    align-items: center;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+  }
+  
+  article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+  }
+  
+  article .icon {
+    cursor: default;
+  }
+  
+
 /*start contact*/
-.contact{
+/*
+#contact{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,21 +278,18 @@ text-align: center;
     background: url(../img/contact.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-
 }
-
 .contact .box{
     background: transparent;
-border: 2px solid rgba(255,255,255,.2);
-backdrop-filter: blur(10px);
-box-shadow: 0 0 10px rgba(0,0,0,.2);
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
     border-radius: 10px;
     color: #fff;
     padding: 30px 40px;
-
-
 }
-.box h1{
+
+.contact .box h1{
     font-size: 40px;
     color: #3a013a;
     text-align: center;
@@ -192,13 +304,13 @@ box-shadow: 0 0 10px rgba(0,0,0,.2);
     from{width: 0;}
     to{width: 100%;}
 }
-.box .input-box{
+.contact .box .input-box{
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
-.input-box input{
+.contact .input-box input{
     width: 100%;
     height: 100%;
     background: transparent;
@@ -210,18 +322,17 @@ box-shadow: 0 0 10px rgba(0,0,0,.2);
     color: #fff;
     padding: 20px 45px 20px 20px;
 }
-.input-box input::placeholder{
+.contact .input-box input::placeholder{
     color: #fff;
 }
-.input-box  i {
+.contact .input-box  i {
     position: absolute;
     right: 20px;
     top:50%;
     transform: translateY(-50%);
     font-size: 20px;
-   
 }
-.box .btn{
+.contact .box .btn{
     width: 100%;
     height: 45px;
     background-color: #fff;
@@ -234,10 +345,72 @@ font-size: 16px;
 color: #333;
 font-weight: 600;
 }
-.input-box:hover {
-    border:2px solid rgb(255, 255, 255);
+.contact .input-box:hover {
+    border:12px solid rgb(255, 255, 255);
     border-radius: 40px;
 }
-.box .btn:hover{
+.contact .box .btn:hover{
     opacity: 50% ;
 }
+*/
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    background: url(../img/contact.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+  }
+  
+  .contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+  }
+  .section__text{
+    font-size:40px;
+    font-weight: 20px;
+
+    color: #2b1055;
+    white-space: nowrap;
+    letter-spacing: 8px;
+    padding-left: 10px;
+    align-items: center;
+    text-align: center;
+  }
+  .contact-info-container p {
+    font-size: larger;
+  }
+  
+  .contact-icon {
+    cursor: default;
+  }
+  
+  .email-icon {
+    height: 2.5rem;
+  }
+  
+  /* FOOTER SECTION */
+  
+  footer {
+    height: 26vh;
+    margin: 0 1rem;
+  }
+  
+  footer p {
+    text-align: center;
+  }
