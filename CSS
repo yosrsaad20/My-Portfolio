@@ -60,7 +60,7 @@ nav ul li a.active{
 /*start home*/
 section {
     box-sizing: border-box;
-    min-height: 100vh;
+  
   }
   .section-container {
     display: flex;
@@ -107,6 +107,7 @@ section {
     background-color: #ffdef3;
     gap: 5rem;
     align-items: center;
+    height: 100vh;
     
 }
 #about h1 {
@@ -160,7 +161,7 @@ section {
 /*icons*/
 .icon{
     cursor: pointer;
-    height: 2rem;
+    height: 2.5rem;
 }
 /*button*/
 .btn-container{
@@ -195,7 +196,7 @@ border: rgb(59, 49, 49) 0.1rem ;
 }
 .btn-color-2:hover{
     color: rgb(40, 2, 58);
-   background: rgb(178, 110, 209)
+   background: rgb(218, 167, 241)
     
     
 }
@@ -213,6 +214,7 @@ border: rgb(59, 49, 49) 0.1rem ;
     display: flex;
     background-color: #f3d8ff;
     gap: 5rem;
+    height: 100vh;
     align-items: center;
     position: relative;
   }
@@ -354,10 +356,11 @@ font-weight: 600;
 }
 */
 #contact {
+    
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-    height: 70vh;
+    height:90vh;
     background: url(../img/contact.jpg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -365,15 +368,23 @@ font-weight: 600;
   
   .contact-info-upper-container {
     display: flex;
+    align-items: center;
     justify-content: center;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+    border-radius: 1rem;
+    border: rgb(53, 53, 53) 0.2rem solid;
+    border-color: rgb(47, 0, 56);
     background: (250, 250, 250);
     margin: 2rem auto;
     padding: 0.5rem;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
   }
-  
+.contact-info-upper-container p a:hover{
+  color:rgb(205, 145, 240);
+  font-weight: 20%;
+  color: #cccccc;
+}
   .contact-info-container {
     display: flex;
     align-items: center;
@@ -381,36 +392,90 @@ font-weight: 600;
     gap: 0.5rem;
     margin: 1rem;
   }
-  .section__text{
-    font-size:40px;
-    font-weight: 20px;
-
-    color: #2b1055;
-    white-space: nowrap;
-    letter-spacing: 8px;
-    padding-left: 10px;
-    align-items: center;
-    text-align: center;
+  .text-contact{
+   
+   justify-content: center;
+   text-align: center;
+   padding-top: 20px;
   }
-  .contact-info-container p {
+  .section__text_contact{
+    font-size: 30px;
+    font-weight: 25px;
+    color: #bd96fa;
+  }
+
+  .title-contact{
+    letter-spacing: 8px;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   font-size:50px;
+    color: #2b1055;
+  
+  }
+
+  .contact-info-container p a{
     font-size: larger;
+    text-decoration: none;
   }
   
   .contact-icon {
     cursor: default;
+    height: 1.5rem;
   }
   
   .email-icon {
-    height: 2.5rem;
+    height: 5rem;
   }
-  
-  /* FOOTER SECTION */
-  
-  footer {
-    height: 26vh;
-    margin: 0 1rem;
+  .contact-info-upper-container:hover{
+  border:3px solid rgb(205, 145, 240);
+    border-radius: 35px;
   }
+  .copyright  {
+
+    color: #ffffff;
+  text-align: center;
+  position: relative; 
+  bottom: 10px;
+  left: 0; 
+  width: 100%; 
+ flex-direction: row;
+  font-weight: 20px;
   
-  footer p {
-    text-align: center;
+ 
+ 
   }
+
+   /* FOOTER SECTION */ 
+footer nav{
+  justify-content: space-around;
+align-items: center;
+height: 10vh;
+background:linear-gradient( #2f0149da, #42175a);
+display: flex;
+align-self: center;
+
+}
+
+footer nav ul{
+  
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+footer nav ul li{
+  list-style:none;
+  margin-left:30px
+}
+footer nav ul li a{
+  font-family: "Source Code Pro";
+  text-decoration:none;
+  padding:6px 15px;
+  border-radius:20px;
+  color: #ffffff;
+  font-size:18px ;
+  transition: color 0.3s;
+}
+  
+ 
+  
