@@ -1,2 +1,2 @@
 # My-Portfolio
-HTML CSS JSCRIPT
+HTML CSS 
